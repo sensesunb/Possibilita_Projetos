@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  My documentation report
+%  Objetive: Explain what I did and how, so someone can continue with the investigation
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+% Bibliography
+\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+\addbibresource{bibliography.bib} % BibTeX bibliography file
+\defbibheading{bibempty}{}
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=0.5]{pictures/hand}}} % Image background
+\centering
+\vspace*{5cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\textbf{Mouse Adaptado}\\
+{\LARGE Projeto Possibilita!}\par % Book title
+\vspace*{0.2cm}
+
+\begin{figure}[!htb]
+	\centering
+    \includegraphics[scale = 0.25]{pictures/logo}
+\end{figure}
+
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+%\noindent Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
+
+\noindent \textsc{Projeto Possibilita, Universidade de Brasília}\\
+
+\noindent \textsc{github.com/sensesunb/Possibilita\_Projetos}\\ % URL
+
+\noindent Esse trabalho é um projeto feito pela equipe Senses, à qual pertence ao capítulo EMBS (Engineering in Medicine and Biology Society) da Universidade de Brasília. \\ % License information
+
+\noindent \textit{Primeira versão, Fevereiro de 2017} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{pictures/plug.jpg} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{pictures/hand2} % Chapter heading image
+
+\chapter{Introdução}
+
+\section{Motivação}\index{Motivação}
+Colocar a motivação do projeto
+
+\section{Objetivo e Público Alvo}\index{Objetivo e Público Alvo}
+Pessoas com pouca facilidade ou até impossiblidade de exercer uma pressão sobre um mouse, tais como pacientes de AVC ou de Parkisson, setem uma limitação na utilização desta tecnologia que usa-se diariamente tanto no âmbito pessoal quanto no profissional. Então, o propósito deste projeto é facilitar a pressão dos botões do mouse ou até utilizar os pés para esse fim.
+
+\section{Projetos de Referência}\index{Projetos de Referência}
+
+%This statement requires citation \cite{book_key}; this one is more specific \cite[122]{article_key}.
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
+\chapterimage{pictures/suporte}
+
+\chapter{Construindo o Mouse}
+
+\section{Primeiras Ideias}\index{Primeiras Ideias}
+
+\section{Etapas de Construção do Mouse}\index{Etapas de Construção do Mouse}
+\subsection{Materiais Necessários}
+
+	\begin{itemize}
+	\item Mouse
+    \item Interruptor de campanhia
+    \item Fio de cobre maleável
+    \item Plug macho P2 (um para cada interruptor)
+    \item Plug fêmea P2 (um para cada interruptor)
+    \item Ferro de solda
+    \item Solda (Estanho)
+    \item Lixa
+    \item Chaves de fenda ou philips
+	\end{itemize}
+	
+\subsection{Procedimento}
+    \begin{enumerate}
+    \item Abertura do Mouse
+    \item Reconhecimento dos Botões de Click
+    \item Retirada dos Botões
+    \item Solda dos plugs e dos fios
+    \item Fixação dos fios no interruptor
+    \item Acabamento
+    \item Testes
+    \end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+
+\chapterimage{pictures/mouse_cabeca}
+\chapter{Resultados e Conclusões}
+
+\section{Ensaios}\index{Ensaios}
+\section{Modularização}\index{Modularização}
+\section{Aspectos a Melhorar}\index{Aspectos a Melhorar}
+
+\vfill
+\end{document}
