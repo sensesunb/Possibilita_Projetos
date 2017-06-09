@@ -1,0 +1,31 @@
+Organizaçao dos arquivos:
+
+-Main.py
+	.Contem nosso loop "while" que controla o programa;
+	.Contem variaveis "globais";
+	.Arquivo principal, cujo vai chamar todos os outros.
+
+-Janela.py
+	.Desenha_Circulos
+	.Desenha_Linhas
+	.Desenha_Quadrado
+	.Janelas
+	.func_trackbar
+
+-Mouse.py
+	.move_mouse
+	.clique_direito
+	.clique_duplo
+	.clique_esquerdo
+
+-Imagem.py
+	.Hough_Circles
+	.calibragem2
+
+-Analise.py
+	.Classifica_circulos
+	.Ordena_centros
+	.Acha_MTQ
+	.analisa_movimento
+	.acha_circulos
+	.temporiza_perda_circulos
