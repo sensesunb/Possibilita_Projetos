@@ -1,6 +1,8 @@
 import numpy as np
 import cv2
 
+import funcoes
+
 #pega um objeto de webcam, no caso pega o primeiro disponivel (indice 0)
 cap = cv2.VideoCapture(0) 
 
@@ -20,8 +22,8 @@ while(True):
 			       cv2.HOUGH_GRADIENT,	#algoritmo para detectar circulos
 			       2,			#tamanho da imagem dividido por esse numero, no caso 2
 			       rows/4,			#distância mínima em pixels entre os centros dos circulos detectados
-                               param1=200,		#threshold máximo do detector Canny edge detector (chamado por cvHoughCircles)
-                               param2=50,		#threshold mínimo do Canny edge detector (setado em metade do valor anterior)
+                   param1=200,		#threshold máximo do detector Canny edge detector (chamado por cvHoughCircles)
+                   param2=50,		#threshold mínimo do Canny edge detector (setado em metade do valor anterior)
  			       minRadius=10,		#raio mínimo do circulo (qualquer circulo com raio menor não vai ser detectado)
 			       maxRadius=40)		#raio máximo do círculo (qualquer círculo com raio maior não vai ser detectado)
     
@@ -34,6 +36,9 @@ while(True):
     
     #Mostra o resultado na tela
     cv2.imshow('detected circles',img)
+
+    c = funcoes.soma (2,1)
+    print(c)
 
     #Espera o usuario teclar q para sair do while e encerrar o programa 
     if cv2.waitKey(1) & 0xFF == ord('q'):
