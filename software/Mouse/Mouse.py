@@ -2,10 +2,11 @@ import numpy as np
 import cv2
 import pyautogui, sys
 
-def clique_direito():
-
+def clique_direito(x,y):
+	Conta_Erro_OmbroD = 31
+	Conta_Erro_OmbroE = 1
 	if Conta_Erro_OmbroD > 30 & Conta_Erro_OmbroE < 10:
-		pyautogui.click (button = 'right')
+		pyautogui.click (x,y,button = 'right')
 
 def clique_esquerdo():
 	if Conta_Erro_OmbroE > 30 & Conta_Erro_OmbroD < 10:
@@ -20,6 +21,7 @@ def clique_duplo():
 
 def move(direction):
 	x, y = pyautogui.position()
+	acelerador = 15
 
 	#Movimenta o mouse para baixo
 	if direction == 0:

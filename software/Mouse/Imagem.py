@@ -75,10 +75,10 @@ def calibragem(ImgOriginal, v3fCircles, v3fOrdenados_inicial, MTQ_inicial):
 
   charKey = cv2.waitKey(10)
 
-  if charKey == 32 & v3fOrdenados_inicial.size() == 4
+  if charKey == 32 & v3fOrdenados_inicial.size() == 4:
     controle = 1
 
-  if charKey == 27
+  if charKey == 27:
     controle = -1
 
   return controle

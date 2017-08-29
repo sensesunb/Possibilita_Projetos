@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 #pega um objeto de webcam, no caso pega o primeiro disponivel (indice 0)
-cap = cv2.VideoCapture(0) 
+cap = cv2.VideoCapture(1) 
 
 while(True):
     # Captura a imagem frame por frame
